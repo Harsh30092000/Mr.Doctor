@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>உடல் வலி</title>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static',filename= 'imgs/icon.png')}}">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- External Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'css/prob.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'css/contact.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'css/scroll.css')}}">
+
+    <!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <div class="chooseage" id="chooser">
+        <div class="container"><div class="row">
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob1">
+                        <img src="{{ url_for('static',filename= 'imgs/baby.png')}}" alt="">
+                        <h1 class="ttit">குழந்தை</h1>
+                        <button onclick="hidechoice()" class="btn btn1">திற</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob1">
+                        <img src="{{ url_for('static',filename= 'imgs/teen.png')}}" alt="">
+                        <h1 class="ttit">பதின்வயதினர்</h1>
+                        <button onclick="hidechoice()" class="btn btn1">திற</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob1">
+                        <img src="{{ url_for('static',filename= 'imgs/adult.png')}}" alt="">
+                        <h1 class="ttit">பெரியவர்</h1>
+                        <button onclick="hidechoice()" class="btn btn1">திற</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob1">
+                        <img src="{{ url_for('static',filename= 'imgs/aged.png')}}" alt="">
+                        <h1 class="ttit">வயது</h1>
+                        <button onclick="hidechoice()" class="btn btn1">திற</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+        </div></div>
+    </div>
+
+    <script>
+        function hidechoice(){
+            document.getElementById('chooser').style.zIndex='-1000';
+        }
+    </script>
+
+    <!-- Navbar -->
+    <header>
+        <a href="http://localhost:5000/en/body-pain"><img src="{{ url_for('static',filename= 'imgs/translate.png')}}" class="translate" alt=""></a>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="http://localhost:5000/en/home">
+                <img src="{{ url_for('static',filename= 'imgs/icon.png')}}" width="30" height="35" class="d-inline-block align-top" alt="" loading="lazy">
+                &nbsp;திரு வைத்தியர்
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/ta/home" >முகப்பு</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/ta/home">சித்தா பற்றி</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/ta/home">பிரச்சினைகள்</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/ta/forum">மன்றம்</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/ta/nearby">அருகிலுள்ள</a>
+                    </li>
+                    <li class="nav-item nearby_button">
+                    <a class="nav-link" href="http://localhost:5000/ta/shop"><button class="nearby_btn">கடை &#x1F6D2;</button></a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+        </div>
+        <hr>
+    </header>
+
+    <div class="content"></div>
+    <!-- About -->
+    <div id="about"><br></div>
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <img src="{{ url_for('static',filename= 'imgs/bodypain_landing.png')}}" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h1 class="title t1">உடல் வலி</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Content -->
+    <div class="problemmm">
+        <div class="container problem" id="problem">
+        <div class="row">
+            <!-- List of Problems Starts Here -->
+            <div class="col-lg-6">
+                <div class=" prob prob1">
+                <h1 class="title_in">&nbsp;கீல்வாதம்</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;தேவையான மருந்துகள்:</h3>
+                <ul>
+                    <li>அமுக்கரா சூரணம்</li>
+                    <li>ரஸா கெந்தி மெழுகு</li>
+                    <li>செரங்கோட்டை நெய்</li>
+                    <li>இடிவல்லதி மெழுகு</li>
+                    <li>பூர்ண சந்திரோதயம்</li>
+                    <li>சந்தமருதா சந்தூரம்</li>
+                    <li>ஆறுமுக செந்தூரம்</li>
+                
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;செய்முறை:</h3>
+                <ol>
+                    <li>தேர்வு செய்யும் மருந்து எதிர்ப்பு வாதா மற்றும் வலி நிவாரணியாக இருக்க வேண்டும். ஆரம்பத்தில் சுத்திகரிப்பு செய்ய வேண்டும் இவற்றில் ஏதேனும் ஒன்றைக் கொண்டு நிர்வகிக்கப்பட வேண்டும், அகஸ்தியார் குஜம்பு, கோடசூரி மாத்திரை, சஞ்சீவி மாத்திரை, மந்தா என்னாய், இதனால் வாதத்தை இயல்பு நிலைக்கு கொண்டு வர வேண்டும். பின்னர் உள் மருந்துகள் நிர்வகிக்கப்படுகின்றன.</li>
+                    <li>தண்ணீரைப் பயன்படுத்தி மேலே உள்ள பொருட்களின் ஒரு திரவத்தை உருவாக்கவும், பின்னர் வடிகட்டவும்.இது 8 பாகங்கள் தண்ணீரில் சேர்க்கப்பட்டு, வேகவைக்கப்பட்டு கால் பகுதிக்கு குறைக்கப்பட்டு வடிகட்டப்படுகிறது.</li>
+                    <li>செரங்கோட்டை தயாரிப்பு மற்றும் நிலவெம்பு குடினீரை 1 வருடம் எடுக்க அறிவுறுத்தப்பட்டுள்ளது.</li>
+
+                </ol>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class=" prob prob1">
+                <h1 class="title_in">&nbsp;தசை திரிபு</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;தேவையான மருந்துகள்:</h3>
+                <ul>
+                    <li>சுந்தி</li>
+                    <li>சினேகனா</li>
+                    <li>அம்லா</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;செய்முறை:</h3>
+                <ol>
+                    <li>இஞ்சி ஏராளமான ஃபிளாவனாய்டு ஆக்ஸிஜனேற்றிகள் மற்றும் சக்திவாய்ந்த அழற்சி எதிர்ப்பு கூறுகளால் நிரம்பியுள்ளது, இது கீழ் கால்களில் தசைதிரிபுசெய்யப்பட்ட தசைகளை திறம்பட தளர்த்தும். 2 தேக்கரண்டி சுந்தியுடன் ஒரு டம்ளர் வெதுவெதுப்பான நீரைக் குடிப்பது, அதாவது உலர்ந்த இஞ்சி தூள் மற்றும் தேன் ஆகியவை தசைப்பிடிப்பிலிருந்து உடனடி நிவாரணம் அளிக்கிறது.</li>
+                    <li>ஒரு இனிமையான எண்ணெய் மசாஜின் வெளிப்புற தீர்வு, அதாவது தொடைகள் மற்றும் கால்களில் உள்ள தசைக் கஷ்டத்தை குணப்படுத்த சிறந்த முறைகளில் ஒன்று சினேகனா. அஸ்வகந்தா அல்லது சந்தனா உட்செலுத்தப்பட்ட தைலம் அல்லது எண்ணெய்களைப் பூசி, புண் தசைகளில் தேய்த்தல் முடிச்சுகளை அவிழ்த்து, அந்தப் பகுதியில் மென்மை குறைகிறது.</li>
+                    <li>1 தேக்கரண்டி நிர்குண்டி தூளை கரைத்து அல்லது சில வெல்லங்களுடன் தண்ணீரில் பேஸ்ட் செய்து, இந்த காபி தண்ணீரை தினமும் ஒரு முறை குடிக்கவும்.</li>
+                </ol>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class=" prob prob1">
+                <h1 class="title_in">&nbsp;மூட்டு வலி</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;தேவையான மருந்துகள்:</h3>
+                <ul>
+                    
+                    <li>அஜ்வைன்</li>
+                    <li>டாஷ்மூல்</li>
+                    <li>ஷல்லக்கி</li>
+                    <li>யூகலிப்டஸ்</li>
+                    <li>இஞ்சி</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;செய்முறை:</h3>
+                <ol>
+                    <li>அழற்சி எதிர்ப்பு கூறுகள் இருப்பதால் கீல்வாத வலிக்கு இயற்கையான உதவியாக அஜ்வைன் செயல்படுகிறது. குளிர்காலத்தில் அதிகப்படியான வலியைக் குறைக்க உதவும் மயக்க பண்புகளும் இதில் உள்ளன. நீங்கள் செய்ய வேண்டியது என்னவென்றால், ஒரு கரண்டி கேரம் விதைகள் அல்லது அஜ்வைனை ஒரு தொட்டியில் சூடான நீரில் சேர்த்து, உங்கள் வலி மூட்டுகளை தண்ணீரில் ஊறவைத்து 5-10 நிமிடங்கள் உட்கார்ந்து கொள்ளுங்கள்; இது வீக்கம் மற்றும் வலியை எளிதாக்க உதவும்.</li>
+                    <li>ஷல்லாக்கி மூலிகை உங்கள் மூட்டுகளை வலுவாக வைத்திருக்கவும் எந்தவொரு வலியிலிருந்தும் விடுபடவும் அறியப்படுகிறது.</li>
+                    
+                </ol>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class=" prob prob1">
+                <h1 class="title_in">&nbsp;முதுகு வலி</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;தேவையான மருந்துகள்:</h3>
+                <ul>
+                    <li>கருப்பு கிராம்</li>
+                    <li>காசியா ஆரிகுலட்டா</li>
+                    <li>ஆந்த்ராகுவினோன்</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;செய்முறை:</h3>
+                <ol>
+                    <li>சித்தாவின் தேசிய நிறுவனத்தில் புலிப்பானி -500 உரையின் இலக்கிய ஆதாரங்களின் அடிப்படையில் இந்த சிறப்பு வகை மாவு ஒத்தடம் உருவாக்கப்பட்டுள்ளது, இது காசியா ஆரிகுலட்டா (அவாராய்) இலைகள் மற்றும் கருப்பு கிராம் ஆகியவற்றின் மூலிகை பயன்பாட்டை முக்கிய பொருட்களாக பயன்படுத்துகிறது. தரையில் கலவை முட்டையின் வெள்ளை அல்லது தண்ணீரில் கலந்து பேஸ்டாக தயாரிக்கப்படுகிறது. மேற்கண்ட மாவு ஒத்தடமயின் பொருட்களில் உள்ள முக்கியமான கலவைகள் ஆந்த்ரோக்வினோன், ஃபிளாவனாய்டுகள், ஆல்கலாய்டுகள் மற்றும் பினோலிக் கலவைகள் ஆகும்.</li>
+                    <li>இந்த மருந்து பயன்பாடு பல எலும்பு மற்றும் தசை எலும்பு நிலைமைகளுக்கு வாக்குறுதியைக் கொண்டுள்ளது மற்றும் குறிப்பாக வலி இடுப்பு வட்டு நோய், வட்டு புரோலப்ஸ், ரேடிகுலோபதி போன்ற நிலைமைகளில் பயன்படுத்தப்படுகிறது.</li>
+                </ol>
+                </div>
+            </div>
+            <!-- List of Problems Ends Here -->
+        </div>
+        </div>
+    </div>
+   
+    <!-- Contact -->
+    <div class="contactbg">
+        <div class="container">
+            <div class="row contact">
+                <div class="col-lg-4 branding">
+                    <img src="{{ url_for('static',filename= 'imgs/icon.png')}}" width="70" height="81.666" class="d-inline-block align-top" alt="" loading="lazy">
+                    &nbsp;Gazda
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3">
+                    <p class="find">முகவரி:</p>
+                    <p class="address">
+                        #123, XYZ தெரு, ABC காலனி, <br>மதுரவோயல், சென்னை, <br>தமிழ்நாடு, இந்தியா <br>அஞ்சல் குறியீடு: 600094
+                    </p>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3">
+                    <p class="find">தொடர்புக்கு:</p>
+                    <p class="address">
+                        Email: <a href = "mailto: abc@example.com">abc@example.com</a><br>
+                        Phone: <a href="tel:123-456-7890">123-456-7890</a><br>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function open_sugg(){
+            document.getElementById('sugg').style.zIndex='100';
+        }
+        function close_sugg(){
+            document.getElementById('sugg').style.zIndex='-100';
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+</body>
+</html>

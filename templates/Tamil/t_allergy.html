@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ஒவ்வாமை</title>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static',filename= 'imgs/icon.png')}}">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- External Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'css/prob.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'css/contact.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'css/scroll.css')}}">
+
+    <!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <div class="chooseage" id="chooser">
+        <div class="container"><div class="row">
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob2">
+                        <img src="{{ url_for('static',filename= 'imgs/baby.png')}}" alt="">
+                        <h1 class="ttit">குழந்தை</h1>
+                        <button onclick="hidechoice()" class="btn btn4">திற</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob2">
+                        <img src="{{ url_for('static',filename= 'imgs/teen.png')}}" alt="">
+                        <h1 class="ttit">பதின்வயதினர்</h1>
+                        <button onclick="hidechoice()" class="btn btn4">திற</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob2">
+                        <img src="{{ url_for('static',filename= 'imgs/adult.png')}}" alt="">
+                        <h1 class="ttit">பெரியவர்</h1>
+                        <button onclick="hidechoice()" class="btn btn4">திற</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob2">
+                        <img src="{{ url_for('static',filename= 'imgs/aged.png')}}" alt="">
+                        <h1 class="ttit">வயது</h1>
+                        <button onclick="hidechoice()" class="btn btn4">திற</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+        </div></div>
+    </div>
+
+    <script>
+        function hidechoice(){
+            document.getElementById('chooser').style.zIndex='-1000';
+        }
+    </script>
+
+    <!-- Navbar -->
+    <header>
+        <a href="http://localhost:5000/en/allergy"><img src="{{ url_for('static',filename= 'imgs/translate.png')}}" class="translate" alt=""></a>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="http://localhost:5000/en/home">
+                <img src="{{ url_for('static',filename= 'imgs/icon.png')}}" width="30" height="35" class="d-inline-block align-top" alt="" loading="lazy">
+                &nbsp;திரு வைத்தியர்
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/ta/home" >முகப்பு</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/ta/home">சித்தா பற்றி</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/ta/home">பிரச்சினைகள்</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/ta/forum">மன்றம்</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/ta/nearby">அருகிலுள்ள</a>
+                    </li>
+                    <li class="nav-item nearby_button">
+                    <a class="nav-link" href="http://localhost:5000/ta/shop"><button class="nearby_btn">கடை &#x1F6D2;</button></a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+        </div>
+        <hr>
+    </header>
+
+    <div class="all">
+    <div class="content"></div>
+    <!-- About -->
+    <div id="about"><br></div>
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <img style="width: 530px;" src="{{ url_for('static',filename= 'imgs/allergy_landing.png')}}" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h1 class="title t2">ஒவ்வாமை</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Content -->
+    <div class="container problem" id="problem">
+        <div class="row">
+            <!-- List of Problems Starts Here -->
+            <div class="col-lg-6">
+                <div class=" prob prob2">
+                <h1 class="title_in">&nbsp;பூச்சி ஒவ்வாமை</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;தேவையான மருந்துகள்:</h3>
+                <ul>
+                    <li>இலவங்கப்பட்டை</li>
+                    <li>பப்பாளி</li>
+                    <li>வெங்காயம்</li>
+                    <li>மிளகுக்கீரை</li>
+                    <li>கற்றாழை</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;செய்முறை:</h3>
+                <ol>
+                    <li>இலவங்கப்பட்டை மசாலாவில் பாக்டீரியா எதிர்ப்பு மற்றும் அழற்சி எதிர்ப்பு பண்புகள் உள்ளன, அவை உடனடி நிவாரணம் அளிக்கின்றன. சிறிது இலவங்கப்பட்டை நசுக்கி தண்ணீரில் கலந்து பேஸ்ட் தயாரிக்கவும். பாதிக்கப்பட்ட பகுதியில் கலவையை ஒரு மணி நேரம் விட்டு விடுங்கள்.</li>
+                    <li>இந்த பப்பாளியில் உள்ள நொதிகள் பூச்சி விஷத்தை நடுநிலையாக்க உதவுகின்றன. நிவாரணத்திற்காக ஒரு மணி நேரம் இந்த பழத்தின் ஒரு துண்டு கொடுக்கில் வைக்கவும்.</li>
+                    <li>வெங்காய காய்கறியில் என்சைம்கள் உள்ளன, அவை கடியிலிருந்து வரும் அழற்சி சேர்மங்களை உடைக்க உதவுகின்றன. ஒரு வெங்காயத்தை வெட்டி, நமைச்சல் குறையும் வரை அதை நேரடியாக ஸ்டிங்கில் தேய்க்கவும்.</li>
+                </ol>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class=" prob prob2">
+                <h1 class="title_in">&nbsp;தோல் ஒவ்வாமை</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;தேவையான மருந்துகள்:</h3>
+                <ul>
+                    <li>மஞ்சிஷ்டா</li>
+                    <li>கருப்பு</li>
+                    <li>குடசப்பாலை</li>
+                    <li>நிம்பா</li>
+                    <li>திரிபாலா</li>
+                    <li>பிரிங்ராஜ்</li>
+                    <li>சதாவரி</li>
+                    <li>திரிமனா</li>
+                    <li>முர்வா</li>
+                    <li>ஆசனா</li>
+                    <li>மகாத்ரு</li>
+                    <li>வாசா</li>
+                    <li>கதிரா</li>
+                    <li>சந்தனா</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;செய்முறை:</h3>
+                <ol>
+                    <li>தண்ணீரைப் பயன்படுத்தி மேலே உள்ள பொருட்களின் காபி தண்ணீர் தயாரிக்கவும்.</li>
+                    <li>இது 8 பாகங்கள் தண்ணீரில் சேர்க்கப்பட்டு, வேகவைக்கப்பட்டு கால் பகுதி வரை குறைக்கப்பட்டு வடிகட்டப்படுகிறது.</li>
+                    <li>இது குடிக்கும்போது சம அளவு தண்ணீரில் சேர்க்கப்பட வேண்டும்.</li>
+                </ol>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class=" prob prob2">
+                <h1 class="title_in">&nbsp;தூசி ஒவ்வாமை</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;தேவையான மருந்துகள்:</h3>
+                <ul>
+                    <li>எள் எண்ணெய்</li>
+                    <li>குடுச்சி தூள்</li>
+                    <li>மஞ்சள்</li>
+                    <li>திரிபாலா</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;செய்முறை:</h3>
+                <ol>
+                    <li>படுக்கும் நேரத்திற்கு முன் உங்கள் நெற்றி மற்றும் நாசி சைனஸை சூடான எள் எண்ணெயுடன் மசாஜ் செய்யவும்.</li>
+                    <li>திரிபாலாவின் 2 மாத்திரை படுக்கைக்கு அரை மணி நேரத்திற்கு முன் ஒரு டம்ளர் வெதுவெதுப்பான நீரில் எடுத்துக் கொள்ளுங்கள் அல்லது, ஒரு கப் புதிதாக வேகவைத்த தண்ணீரில் 10 நிமிடம் செங்குத்தான 1 டீ
+கரண்டி திரிபாலா தூள் எடுத்துக் கொள்ளுங்கள். </li>
+                    <li>தூசிக்கு எதிரான நோய் எதிர்ப்பு சக்தியை மேம்படுத்த 3-5 கிராம் குடுச்சி தூலை ஒரு நாளைக்கு ஒரு முறை சூடான பால் அல்லது வெதுவெதுப்பான நீரில் எடுத்துக் கொள்ளுங்கள்.</li>
+                    <li>ஒவ்வாமை குணப்படுத்த ஆர்கானிக் மஞ்சள் பொடியிலிருந்து தயாரிக்கப்படும் மூலிகை மஞ்சள் தேநீரை ஒரு நாளைக்கு இரண்டு முறை உட்கொள்ளுங்கள்.</li>
+                </ol>
+                </div>
+            </div>
+            <!-- List of Problems Ends Here -->
+        </div>
+    </div>
+    
+
+    <!-- Contact -->
+    <div class="contactbg">
+        <div class="container">
+            <div class="row contact">
+                <div class="col-lg-4 branding">
+                    <img src="{{ url_for('static',filename= 'imgs/icon.png')}}" width="70" height="81.666" class="d-inline-block align-top" alt="" loading="lazy">
+                    &nbsp;Gazda
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3">
+                    <p class="find">முகவரி:</p>
+                    <p class="address">
+                        #123, XYZ தெரு, ABC காலனி, <br>மதுரவோயல், சென்னை, <br>தமிழ்நாடு, இந்தியா <br>அஞ்சல் குறியீடு: 600094
+                    </p>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3">
+                    <p class="find">தொடர்புக்கு:</p>
+                    <p class="address">
+                        Email: <a href = "mailto: abc@example.com">abc@example.com</a><br>
+                        Phone: <a href="tel:123-456-7890">123-456-7890</a><br>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+</body>
+</html>

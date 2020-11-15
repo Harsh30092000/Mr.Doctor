@@ -1,0 +1,14 @@
+::-webkit-scrollbar
+{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: url('../imgs/olai.png');
+    border-radius: 6px;
+}
+
+/* ::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.5); 
+  } */

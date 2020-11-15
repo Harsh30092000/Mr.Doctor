@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold & Flu</title>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static',filename= 'imgs/icon.png')}}">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- External Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'css/prob.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'css/contact.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'css/scroll.css')}}">
+
+    <!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <div class="chooseage" id="chooser">
+        <div class="container"><div class="row">
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob4">
+                        <img src="{{ url_for('static',filename= 'imgs/baby.png')}}" alt="">
+                        <h1 class="tit">Baby</h1>
+                        <button onclick="hidechoice()" class="btn btn2">Open</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob4">
+                        <img src="{{ url_for('static',filename= 'imgs/teen.png')}}" alt="">
+                        <h1 class="tit">Teens</h1>
+                        <button onclick="hidechoice()" class="btn btn2">Open</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob4">
+                        <img src="{{ url_for('static',filename= 'imgs/adult.png')}}" alt="">
+                        <h1 class="tit">Adult</h1>
+                        <button onclick="hidechoice()" class="btn btn2">Open</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob4">
+                        <img src="{{ url_for('static',filename= 'imgs/aged.png')}}" alt="">
+                        <h1 class="tit">Aged</h1>
+                        <button onclick="hidechoice()" class="btn btn2">Open</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+        </div></div>
+    </div>
+
+    <script>
+        function hidechoice(){
+            document.getElementById('chooser').style.zIndex='-1000';
+        }
+    </script>
+
+    <!-- Navbar -->
+    <header>
+        <a href="http://localhost:5000/ta/flu"><img src="{{ url_for('static',filename= 'imgs/translate.png')}}" class="translate" alt=""></a>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="http://localhost:5000/en/home">
+                <img src="{{ url_for('static',filename= 'imgs/icon.png')}}" width="30" height="35" class="d-inline-block align-top" alt="" loading="lazy">
+                &nbsp;Crop X
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/en/home" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/en/home">About</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/en/home">Problems</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/en/forum">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/en/nearby">Nearby</a>
+                    </li>
+                    <li class="nav-item nearby_button">
+                    <a class="nav-link" href="http://localhost:5000/en/shop"><button class="nearby_btn">Shop &#x1F6D2;</button></a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+        </div><hr>
+    </header>
+
+    <div class="all">
+    <div class="content"></div>
+    <!-- About -->
+    <div id="about"><br></div>
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <img src="{{ url_for('static',filename= 'imgs/flu_landing.png')}}" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h1 class="title t4">Cold & Flu</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Content -->
+    <div class="container problem" id="problem">
+        <div class="row">
+            <!-- List of Problems Starts Here -->
+           
+            <div class="col-lg-6">
+                <div class=" prob prob4">
+                <h1 class="title_in">&nbsp;Cough</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;Ingridents:</h3>
+                <ul>
+                    <li>Adhatoda zeylanica leaf juice</li>
+                    <li>Honey</li>
+                    <li>Allium cepa</li>
+                    <li>Piper longum</li>
+                    <li>Terminalia bellirica </li>
+                    <li>Zingiber officinale</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;Procedure:</h3>
+                <ol>
+                    <li>A mixture of adhatoda zeylanica leaf juice (6ml) and honey (4ml) is given in cough and sore throat.</li>
+                    <li>Allium cepa bulb juice with honey is very effective in cough and colds. for this, freshly prepared, 1 teaspoonful juice of raw allium cepa mixed with 11/2 teaspoonful of honey should be taken. can be given to children suffering from cough.</li>
+                    <li>In whooping cough, equal amount of piper longum fruit powder, zingiber officinale powder and Terminalia bellirica powder is mixed and taken along with honey.</li>
+                </ol>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class=" prob prob4">
+                <h1 class="title_in">&nbsp;Sinusitis</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;Ingridents:</h3>
+                <ul>
+                    <li>Vasanthakusumakaram</li>
+                    <li>thumbai</li>
+                    <li>Chukku or dried ginger</li>
+                    <li>Thippli, Milagu, Omam, Manjal </li>
+                    <li>Vediuppu</li>
+
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;Procedure:</h3>
+                <ol>
+                    <li>Vasanthakusumakaram mathirai with thumbai and thulasi charu</li>
+                    <li>Thrikadagu choornam, palakarai parpam, muthuchipi parpam etc</li>
+                    <li>To 100 parts of chukku or dried ginger, one part of camphor is mixed, this mixture is placed over a piece of cloth. This cloth is rolled as stick, and it is burnt. The smoke coming from this wick is allowed to be inhaled by the patient.</li>
+                    <li>Similarly thippli, milagu, omam, manjal are made into paste, applied in a cloth, wicks prepared and smoke inhale. This is very effective for pus and watery discharge from nose.</li>
+                    <li>Equal amount of vediuppu, manjal,milagu is made to paste and used for fumigation.</li>
+
+                </ol>
+                </div>
+            </div>
+             <div class="col-lg-6">
+                <div class=" prob prob4">
+                <h1 class="title_in">&nbsp;Common Cold</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;Ingridents:</h3>
+                <ul>
+                    <li>Tulsi</li>
+                    <li>Dried ginger</li>
+                    <li>Honey</li>
+                    <li>Black pepper</li>
+                    <li>Amla</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;Procedure:</h3>
+                <ol>
+                    <li>Leaves of holy basil (Tulsi) plant mixed with an equal quantity of dried ginger powder form an excellent substitute for tea during cold and flu. This may be taken by adding milk and sugar three times a day.</li>
+                    <li>Juice of ginger (Adrak) and holy basil (Tulsi) one-one tea spoon (5 ml.) mixed with one tea spoon (5 ml.) honey, to be taken two-three times a day.</li>
+                    <li>Powder of black pepper (marich) half tea spoon (2.5 ml.) mixed with jaggery (guda) two times a day.</li>
+                    <li>Two to three tea spoon (10-15 ml.) of fresh juice of Amla or half to one tea spoon (2.5-5 gm) powder of the same is ideal to control cold.</li>
+                </ol>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class=" prob prob4">
+                <h1 class="title_in">&nbsp;Fever</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;Ingridents:</h3>
+                <ul>
+                    <li>Black Pepper</li>
+                    <li>Ginger</li>
+                    <li>Holy Basil</li>
+                    <li>Rose water</li>
+                    <li>Garlic</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;Procedure:</h3>
+                <ol>
+                    <li>Sponging the forehead and the body with cold water is a commonly recommended practice in high fever and in fever due to sun-stroke. For better results, add 1 teaspoonful of rose water to the cold water before sponging. You could even add the rose water to an ice-bag and use it for sponging.</li>
+                    <li>Take about 20 fresh leaves of Holy Basil. Take a small piece of ginger and about 5 grains of black pepper. Boil them together in your tea and drink the warm liquid.</li>
+                    <li>Add 2-3 crushed pods of garlic to a quarter cup of warm water drink it or have it in the form of soup which serves as comforting food and reduces the fever.</li>
+                </ol>
+                </div>
+            </div>
+            <!-- List of Problems Ends Here -->
+        </div>
+    </div>
+    
+
+    <!-- Contact -->
+    <div class="contactbg">
+        <div class="container">
+            <div class="row contact">
+                <div class="col-lg-4 branding">
+                    <img src="{{ url_for('static',filename= 'imgs/icon.png')}}" width="70" height="81.666" class="d-inline-block align-top" alt="" loading="lazy">
+                    &nbsp;Gazda
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3">
+                    <p class="find">Find us at:</p>
+                    <p class="address">
+                        #123, XYZ Street, ABC Colony, <br>Madhurovoyal, Chennai, <br>Tamilnadu, India <br>Pincode: 600094
+                    </p>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3">
+                    <p class="find">Contact us at:</p>
+                    <p class="address">
+                        Email: <a href = "mailto: abc@example.com">abc@example.com</a><br>
+                        Phone: <a href="tel:123-456-7890">123-456-7890</a><br>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="shortcut icon" type="image/png" href="imgs/icon.png">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- External Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="css/shop_cust.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+
+    <!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    <script src="index.js"></script>
+
+</head>
+<body>
+    
+    <div class="postbg" id="confirmation">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 p11" id="post_box"> 
+                <h1 class="logintitle">உறுதிப்படுத்தல் </h1>
+                <button onclick="close_post1()" class="btnclse"><i class="fa fa-close"></i></button>
+                <hr>
+                <form >
+                   <center> <h4 id="conf">எங்களுடன் ஷாப்பிங் செய்ததற்கு நன்றி <br> ஆர்டர் எண்: </h4></center>
+                </form>
+            </div>        
+            <div class="col-lg-3"></div> 
+        </div>
+        </div>
+    </div>
+
+    <!-- Post -->
+    <div class="postbg" id="post_bg">
+        <div class="container">
+        <div class="row" id="checkhide">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 postbox" id="post_box"> 
+                <h1 class="logintitle">சரிபார்</h1>
+                <button onclick="close_post()" class="btnclse"><i class="fa fa-close"></i></button>
+                <hr>
+                <form>
+                    <h4>கட்டண விருப்பங்கள்:</h4>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">டெபிட் கார்டு</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">கடன் அட்டை</label><br>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">டெலிவரி போது பணம்</label><br>
+                    <button onclick="checkout()" type="button" class="btn btn-success postbtn">செலுத்துங்கள்</button>
+                </form>
+            </div>        
+            <div class="col-lg-3"></div> 
+        </div>
+        </div>
+    </div>
+    
+    <div class="cart" id="cart">
+        <h1 class="cart_title">வண்டி</h1>
+        <button onclick="close_cart()" class="nearby_btn c">மூடு</button>
+        <hr>  
+
+        <div class="row">
+            <div class="col-lg-6 h">பொருள்</div>
+            <div class="col-lg-3 h">அளவு</div>
+            <div class="col-lg-3 h">விலை</div>
+            
+            <!-- Products Starts Here -->
+            <div class="col-lg-6 l">பொருள்</div>
+            <div class="col-lg-3 l">அளவு</div>
+            <div class="col-lg-3 l">&#x20B9;விலை</div>
+            <div class="col-lg-6 l">பொருள்</div>
+            <div class="col-lg-3 l">அளவு</div>
+            <div class="col-lg-3 l">&#x20B9;விலை</div>
+            <div class="col-lg-6 l">பொருள்</div>
+            <div class="col-lg-3 l">அளவு</div>
+            <div class="col-lg-3 l">&#x20B9;விலை</div>
+            <div class="col-lg-6 l">பொருள்</div>
+            <div class="col-lg-3 l">அளவு</div>
+            <div class="col-lg-3 l">&#x20B9;விலை</div>
+            <!-- Products Ends Here -->
+        </div>
+        <div class="total">  
+        <hr>
+        <div class="row">
+            <div class="col-lg-4 tch">மொத்தம்</div>
+            <div class="col-lg-3 tch">&#x20B9;1000.00</div>
+            <div class="col-lg-4"><button onclick="open_post()" class="btn btn-outline-success">தொடரவும்</button></div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header>
+        <a href="shop_cust.html"><img src="imgs/translate.png" class="translate" alt=""></a>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="t_index.html">
+                <img src="imgs/icon.png" width="30" height="35" class="d-inline-block align-top" alt="" loading="lazy">
+                &nbsp;Crop X
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link aaa theight" href="t_index.html" >முகப்பு</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa theight" href="t_index.html#about">சித்தா பற்றி</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa theight" href="t_index.html#problem">பிரச்சினைகள்</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa theight" href="t_forum_public.html">மன்றம்</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa theight" href="t_nearby.html">அருகிலுள்ள</a>
+                    </li>
+                    <li class="nav-item nearby_button">
+                    <a id="open" class="nav-link" href="#"><button onclick="open_cart()" class="nearby_btn">வண்டி &#x1F6D2;</button></a>
+                    
+                    </li>
+                </ul>
+                </div>
+            </nav>  
+        </div>
+        <hr>
+    </header>
+
+
+    <script>
+        function open_cart(){
+            document.getElementById('cart').style.right='0px';
+        }
+        function close_cart(){
+            document.getElementById('cart').style.right='-360px';
+        }
+    </script>
+    <!-- Slider -->
+    <div class="cont">
+        <div class="slider">
+            <div class="slide slide1"></div>
+            <!-- Main -->
+            <div class="slide slide2"></div>
+            <div class="slide slide3"></div>
+            <div class="slide slide4"></div>
+            <div class="slide slide5"></div>
+        </div>
+    </div>
+    
+    <!-- Products -->
+    <div class="container product">
+        <div class="row">
+            <!-- Product Listing Start -->
+            <div class="col-lg-4">
+                <div class="box">
+                    <h2 class="header">கபாசுரா குடினீர்</h2>
+                    <hr>
+                    <img src="imgs/product.jpg" alt="">
+                    <h4>விலை: &#x20B9;100.00</h4>
+                    <div class="cartadd">
+                        <button>-</button><button onclick="open_cart()">&#x1f6d2;</button><button>+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box">
+                    <h2 class="header">Kabasura Kudineer</h2>
+                    <hr>
+                    <img src="imgs/product.jpg" alt="">
+                    <h4>Price: &#x20B9;100.00</h4>
+                    <div class="cartadd">
+                        <button>-</button><button onclick="open_cart()">&#x1f6d2;</button><button>+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box">
+                    <h2 class="header">Kabasura Kudineer</h2>
+                    <hr>
+                    <img src="imgs/product.jpg" alt="">
+                    <h4>Price: &#x20B9;100.00</h4>
+                    <div class="cartadd">
+                        <button>-</button><button onclick="open_cart()">&#x1f6d2;</button><button>+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box">
+                    <h2 class="header">Kabasura Kudineer</h2>
+                    <hr>
+                    <img src="imgs/product.jpg" alt="">
+                    <h4>Price: &#x20B9;100.00</h4>
+                    <div class="cartadd">
+                        <button>-</button><button onclick="open_cart()">&#x1f6d2;</button><button>+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box">
+                    <h2 class="header">Kabasura Kudineer</h2>
+                    <hr>
+                    <img src="imgs/product.jpg" alt="">
+                    <h4>Price: &#x20B9;100.00</h4>
+                    <div class="cartadd">
+                        <button>-</button><button onclick="open_cart()">&#x1f6d2;</button><button>+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box">
+                    <h2 class="header">Kabasura Kudineer</h2>
+                    <hr>
+                    <img src="imgs/product.jpg" alt="">
+                    <h4>Price: &#x20B9;100.00</h4>
+                    <div class="cartadd">
+                        <button>-</button><button onclick="open_cart()">&#x1f6d2;</button><button>+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box">
+                    <h2 class="header">Kabasura Kudineer</h2>
+                    <hr>
+                    <img src="imgs/product.jpg" alt="">
+                    <h4>Price: &#x20B9;100.00</h4>
+                    <div class="cartadd">
+                        <button>-</button><button onclick="open_cart()">&#x1f6d2;</button><button>+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box">
+                    <h2 class="header">Kabasura Kudineer</h2>
+                    <hr>
+                    <img src="imgs/product.jpg" alt="">
+                    <h4>Price: &#x20B9;100.00</h4>
+                    <div class="cartadd">
+                        <button>-</button><button onclick="open_cart()">&#x1f6d2;</button><button>+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="box">
+                    <h2 class="header">Kabasura Kudineer</h2>
+                    <hr>
+                    <img src="imgs/product.jpg" alt="">
+                    <h4>Price: &#x20B9;100.00</h4>
+                    <div class="cartadd">
+                        <button>-</button><button onclick="open_cart()">&#x1f6d2;</button><button>+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contactbg">
+        <div class="container">
+            <div class="row contact">
+                <div class="col-lg-4 branding">
+                    <img src="imgs/icon.png" width="70" height="81.666" class="d-inline-block align-top" alt="" loading="lazy">
+                    &nbsp;Gazda
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3">
+                    <p class="find">முகவரி:</p>
+                    <p class="address">
+                        #123, XYZ தெரு, ABC காலனி, <br>மதுரவோயல், சென்னை, <br>தமிழ்நாடு, இந்தியா <br>அஞ்சல் குறியீடு: 600094
+                    </p>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3">
+                    <p class="find">தொடர்புக்கு:</p>
+                    <p class="address">
+                        Email: <a href = "mailto: abc@example.com">abc@example.com</a><br>
+                        Phone: <a href="tel:123-456-7890">123-456-7890</a><br>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function open_post(){
+            document.getElementById('post_bg').style.display='block';
+        }
+        function close_post(){
+            document.getElementById('post_bg').style.display='none';
+        }
+
+        function checkout(){
+            document.getElementById('checkhide').style.display='none';
+            setTimeout(checko, 2000);
+        }        
+        function checko(){
+            document.getElementById('post_bg').style.display='none';
+            document.getElementById('conf').innerHTML=document.getElementById('conf').innerHTML+(Math.floor(Math.random() * 20)+1000);
+            document.getElementById('confirmation').style.display='block';
+        }
+        function close_post1(){
+            document.getElementById('checkhide').style.display='block';
+            document.getElementById('confirmation').style.display='none';
+
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+</body>
+</html>

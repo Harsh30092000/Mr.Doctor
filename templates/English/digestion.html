@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digestion</title>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static',filename= 'imgs/icon.png')}}">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- External Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'css/prob.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'css/contact.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename= 'css/scroll.css')}}">
+
+    <!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <div class="chooseage" id="chooser">
+        <div class="container"><div class="row">
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob3">
+                        <img src="{{ url_for('static',filename= 'imgs/baby.png')}}" alt="">
+                        <h1 class="tit">Baby</h1>
+                        <button onclick="hidechoice()" class="btn btn3">Open</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob3">
+                        <img src="{{ url_for('static',filename= 'imgs/teen.png')}}" alt="">
+                        <h1 class="tit">Teens</h1>
+                        <button onclick="hidechoice()" class="btn btn3">Open</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob3">
+                        <img src="{{ url_for('static',filename= 'imgs/adult.png')}}" alt="">
+                        <h1 class="tit">Adult</h1>
+                        <button onclick="hidechoice()" class="btn btn3">Open</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="container"><div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 age prob3">
+                        <img src="{{ url_for('static',filename= 'imgs/aged.png')}}" alt="">
+                        <h1 class="tit">Aged</h1>
+                        <button onclick="hidechoice()" class="btn btn3">Open</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div></div>
+            </div>
+        </div></div>
+    </div>
+
+    <script>
+        function hidechoice(){
+            document.getElementById('chooser').style.zIndex='-1000';
+        }
+    </script>
+
+    <!-- Navbar -->
+    <header>
+        <a href="http://localhost:5000/ta/digestion"><img src="{{ url_for('static',filename= 'imgs/translate.png')}}" class="translate" alt=""></a>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="http://localhost:5000/en/home">
+                <img src="{{ url_for('static',filename= 'imgs/icon.png')}}" width="30" height="35" class="d-inline-block align-top" alt="" loading="lazy">
+                &nbsp;Crop X
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/en/home" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/en/home">About</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/en/home">Problems</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/en/forum">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link aaa height" href="http://localhost:5000/en/nearby">Nearby</a>
+                    </li>
+                    <li class="nav-item nearby_button">
+                    <a class="nav-link" href="http://localhost:5000/en/shop"><button class="nearby_btn">Shop &#x1F6D2;</button></a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+        </div><hr>
+    </header>
+
+    <div class="all">
+    <div class="content"></div>
+    <!-- About -->
+    <div id="about"><br></div>
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <img src="{{ url_for('static',filename= 'imgs/digestion_landing.png')}}" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h1 class="title t3">Digestion</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Content -->
+    <div class="container problem" id="problem">
+        <div class="row">
+            <!-- List of Problems Starts Here -->
+            <div class="col-lg-6">
+                <div class=" prob prob3">
+                <h1 class="title_in">&nbsp;Constipation</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;Ingridents:</h3>
+                <ul>
+                    <li>Amla</li>
+                    <li>Behada</li>
+                    <li>Harada</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;Procedure:</h3>
+                <ol>
+                    <li>Just steep ½ to 1 teaspoon in a cup of water, preferably hot, for about 5 to 10 minutes and drink it. </li>
+                    <li>People who don’t like the taste may take 2 capsules with warm water per day.</li>
+                    <li>Triphala is usually recommended to take between meals on an empty stomach, or upon rising and just before bed.</li>
+                </ol>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class=" prob prob3">
+                <h1 class="title_in">&nbsp;Peptic Ulcer Disease </h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;Ingridents:</h3>
+                <ul>
+                    <li>licorice powder</li>
+                    <li>1 spoon honey</li>
+                    <li>1 spoon melted ghee</li>
+                    <li>1 cup of cooked broken white rice</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;Procedure:</h3>
+                <ol>
+                    <li>1/4 spoon of licorice powder should be taken with 1 spoon honey or 1 spoon melted ghee will h.I the ulcers if taken for few weeks regularly.</li>
+                    <li>Milk boiled with licorice is also very beneficial in healing ulcers. </li>
+                    <li>Mix half teaspoon of licorice root powder in one cup of warm water. Cover it and leave it overnight. Next morning, add 1 cup of cooked broken white rice into the infusion a. eat it. Take it daily for 1 week. </li>
+                    <li>Drink licorice tea 2-3 times daily for at least 1-2 week </li>
+                </ol>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class=" prob prob3">
+                <h1 class="title_in">&nbsp;Diarrhea</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;Ingridents:</h3>
+                <ul>
+                    <li>Ginger</li>
+                    <li>water</li>
+                    <li>Aniseed</li>
+                    <li>Turmeric powder</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;Procedure:</h3>
+                <ol>
+                    <li>Grate 1 inch of ginger and add to 1 1/4 cup water.</li>
+                    <li>Boil with a little aniseed. After it’s boiled, add a pinch of turmeric powder.</li>
+                    <li>Strain and drink.</li>
+                </ol>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class=" prob prob3">
+                <h1 class="title_in">&nbsp;Acid reflux</h1>
+                <hr>
+                <h3 class="title_">&nbsp;&nbsp;Ingridents:</h3>
+                <ul>
+                    <li>Plain yogur</li>
+                    <li>Water</li>
+                    <li>Rock salt</li>
+                    <li>Jeera</li>
+                    <li>Grated ginger</li>
+                    <li>fresh coriander leaves</li>
+                </ul>
+                <h3 class="title_">&nbsp;&nbsp;Procedure:</h3>
+                <ol>
+                    <li>Combine 1/4 cup plain yogurt with 3/4 cup water (or double this, keeping same ratio).</li>
+                    <li>Mix well.</li>
+                    <li>Add 1 tsp rock salt, pinch of roasted jeera (cumin) powder, a bit of grated ginger, and fresh coriander leaves.</li>
+                </ol>
+                </div>
+            </div>
+            
+            <!-- List of Problems Ends Here -->
+        </div>
+    </div>
+    
+
+    <!-- Contact -->
+    <div class="contactbg">
+        <div class="container">
+            <div class="row contact">
+                <div class="col-lg-4 branding">
+                    <img src="{{ url_for('static',filename= 'imgs/icon.png')}}" width="70" height="81.666" class="d-inline-block align-top" alt="" loading="lazy">
+                    &nbsp;Gazda
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3">
+                    <p class="find">Find us at:</p>
+                    <p class="address">
+                        #123, XYZ Street, ABC Colony, <br>Madhurovoyal, Chennai, <br>Tamilnadu, India <br>Pincode: 600094
+                    </p>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-3">
+                    <p class="find">Contact us at:</p>
+                    <p class="address">
+                        Email: <a href = "mailto: abc@example.com">abc@example.com</a><br>
+                        Phone: <a href="tel:123-456-7890">123-456-7890</a><br>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+</body>
+</html>

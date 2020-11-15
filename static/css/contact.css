@@ -1,0 +1,40 @@
+
+/* Contact */
+.contactbg{
+	min-height: 180px;
+	background-color: #2b3664;
+	color: rgba(238, 238, 238, 0.9);
+}
+.branding img{
+    width: 80px;
+    height: 100px;
+}
+.branding{
+	font-size: 300%;
+	color: #eeeeee;
+	padding-top: 50px;
+}
+.find{
+	padding-top: 20px;
+	text-decoration: underline;
+	font-size: 130%;
+	text-align: left;
+}
+.address{
+	text-align: left;
+}
+.address a{
+	color: rgba(238, 238, 238, 0.9);
+}
+.fa{
+	font-size: 40px !important;
+	padding: 10px;
+}
+.fa:hover{
+	text-decoration: none;
+}
+
+
+.cartt{
+	font-size: 20px !important;
+}
